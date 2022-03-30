@@ -1,0 +1,17 @@
+"use strict";
+exports.__esModule = true;
+var validator_1 = require("./validator/validator");
+var constant_1 = require("./constant/constant");
+var email = "zala6206@gmail.com";
+var name = "Jayrajsinh Zala";
+var pincode = "382350";
+var phoneNo = "8200780738";
+var validator = new validator_1.ValidatorCLS();
+var emailResult = validator.isValid(email, constant_1.Constants.emailRegex, 3, 200);
+var nameResult = validator.isValid(name, constant_1.Constants.nameRegex, 5, 20);
+var pincodeResult = validator.isValid(pincode, constant_1.Constants.numberRegex, 6);
+var phoneNoResult = validator.isValid(phoneNo, constant_1.Constants.numberRegex, 10);
+console.log("Valid Email Id Or Not:", emailResult);
+console.log("Valid Name Or Not:", nameResult);
+console.log("Valid Pincode Or Not:", pincodeResult);
+console.log("Valid Phone Or Not:", phoneNoResult);
